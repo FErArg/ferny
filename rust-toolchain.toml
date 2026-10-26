@@ -1,0 +1,6 @@
+# Pinned Rust toolchain for every platform (installed with rustup).
+# Bump deliberately, together with `rust-version` in Cargo.toml.
+[toolchain]
+channel = "1.99.0"
+components = ["rustfmt", "clippy"]
+profile = "minimal"

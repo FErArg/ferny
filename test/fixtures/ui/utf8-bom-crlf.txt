@@ -1,0 +1,2 @@
+﻿Synthetic fixture with BOM and CRLF: ñandú
+second line

@@ -1,0 +1,4 @@
+id = "tools"
+name = "Tools"
+version = "1.0"
+permissions = ["fs.read.project", "fs.write.project", "process.spawn"]

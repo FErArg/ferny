@@ -1,0 +1,24 @@
+[package]
+name = "ferny-core"
+description = "Documents, rope mirror, sessions, encodings, safe-save, IPC, workspace trust and the command registry."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+encoding_rs.workspace = true
+chardetng.workspace = true
+serde.workspace = true
+toml.workspace = true
+regex.workspace = true
+pulldown-cmark.workspace = true
+spellbook.workspace = true
+
+[dev-dependencies]
+
+[lints]
+workspace = true

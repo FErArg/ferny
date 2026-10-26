@@ -1,0 +1,7 @@
+"Paste Selection to Pastebin" = "Pegar selección en Pastebin"
+"Create Gist" = "Crear Gist"
+"Copy to Clipboard" = "Copiar al portapapeles"
+"No text selected" = "No hay texto seleccionado"
+"Paste to pastebin - requires process.spawn permission" = "Pegar en pastebin - requiere permiso process.spawn"
+"Create Gist - requires process.spawn permission" = "Crear Gist - requiere permiso process.spawn"
+"Copied to clipboard" = "Copiado al portapapeles"

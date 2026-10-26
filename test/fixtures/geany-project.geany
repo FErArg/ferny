@@ -1,0 +1,17 @@
+[editor]
+line_wrapping=false
+
+[project]
+name=Imported Demo
+base_path=./
+description=synthetic
+file_patterns=*.c;*.h;
+
+[indentation]
+indent_width=2
+indent_type=0
+
+[build-menu]
+NF_00_CM=make
+FT_00_CM=gcc -c "%f"
+EX_00_CM=./run.sh && rm -rf ~

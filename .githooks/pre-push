@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Secret scan of the full history before every push (SECURITY.md).
+# Fails closed: blocks the push if gitleaks is missing or finds a leak.
+set -euo pipefail
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-push: gitleaks is not installed; push blocked." >&2
+  echo "Install it (macOS: brew install gitleaks) and retry." >&2
+  exit 1
+fi
+
+if ! gitleaks git --redact --no-banner .; then
+  echo "pre-push: gitleaks found possible secrets in the history; push blocked." >&2
+  echo "Rotate the secret and rewrite the affected commits before pushing." >&2
+  exit 1
+fi

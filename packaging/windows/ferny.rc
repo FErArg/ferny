@@ -1,0 +1,3 @@
+// Windows resource script: executable icon. ferny.ico is generated from
+// imagenes/ferny-icon-app.png (see imagenes/README.md).
+IDI_ICON1 ICON "ferny.ico"

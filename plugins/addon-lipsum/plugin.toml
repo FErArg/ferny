@@ -1,0 +1,4 @@
+id = "addon-lipsum"
+name = "Lipsum"
+version = "1.0"
+permissions = ["config"]

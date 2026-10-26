@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferny — Gestor de complementos</title>
+<link rel="stylesheet" href="ferny.css">
+</head>
+<body class="">
+<h1 class="page">Gestor de complementos</h1>
+<p class="note">Herramientas → Complementos…: complementos incluidos y del usuario, con sus permisos. Clic sobre cualquier parte muestra el objeto que la dibuja (clase Qt, nombre y archivo); Esc lo oculta. <a href="index.html">Todas las pantallas</a>.</p>
+<div class="dialog" style="width:720px" data-obj="QDialog" data-name="Gestor de complementos" data-src="ui/src/mainwindow.cpp · showPluginManager()" data-note="Herramientas → Complementos… (H3.4)">
+<div class="titlebar" data-obj="QMainWindow" data-name="ferny::MainWindow (título)" data-src="ui/src/mainwindow.cpp · updateTitle()"><div class="lights"><i></i><i></i><i></i></div>Complementos</div>
+<div class="content"><table class="grid" data-obj="QTreeWidget" data-name="tree" data-src="ui/src/mainwindow.cpp · showPluginManager()"><tr><th>Complemento</th><th>Origen</th><th>Estado</th></tr><tr data-obj="QTreeWidgetItem (casilla)" data-name="Complemento «HTML Characters 1.0»" data-src="ui/src/mainwindow.cpp · showPluginManager()"><td><span class="box on">✓</span> HTML Characters 1.0</td><td>Incluido</td><td>En ejecución</td></tr><tr data-obj="QTreeWidgetItem (casilla)" data-name="Complemento «Class Builder 1.0»" data-src="ui/src/mainwindow.cpp · showPluginManager()"><td><span class="box "></span> Class Builder 1.0</td><td>Incluido</td><td>Desactivado</td></tr><tr data-obj="QTreeWidgetItem (permiso)" data-name="Permiso «Leer los archivos del proyecto»" data-src="ui/src/mainwindow.cpp · showPluginManager()" data-note="Grants en plugin-grants.toml (H3.2)"><td style="padding-left:30px"><span class="box on">✓</span> Leer los archivos del proyecto</td><td></td><td></td></tr><tr data-obj="QTreeWidgetItem (permiso)" data-name="Permiso «Escribir los archivos del proyecto»" data-src="ui/src/mainwindow.cpp · showPluginManager()" data-note="Grants en plugin-grants.toml (H3.2)"><td style="padding-left:30px"><span class="box on">✓</span> Escribir los archivos del proyecto</td><td></td><td></td></tr><tr data-obj="QTreeWidgetItem (casilla)" data-name="Complemento «Word Count 1.2»" data-src="ui/src/mainwindow.cpp · showPluginManager()"><td><span class="box on">✓</span> Word Count 1.2</td><td>Usuario</td><td>En ejecución</td></tr><tr data-obj="QTreeWidgetItem (permiso)" data-name="Permiso «Ejecutar programas»" data-src="ui/src/mainwindow.cpp · showPluginManager()" data-note="Grants en plugin-grants.toml (H3.2)"><td style="padding-left:30px"><span class="box "></span> Ejecutar programas</td><td></td><td></td></tr></table>
+<span data-obj="QLabel" data-name="note" data-src="ui/src/mainwindow.cpp · showPluginManager()">Los complementos se ejecutan aislados y solo usan los permisos marcados aquí. Los cambios se aplican al reiniciar Ferny.</span></div>
+<div class="buttons"><button data-obj="QPushButton" data-name="reset «Volver a preguntar antes del primer uso»" data-src="ui/src/mainwindow.cpp">Volver a preguntar antes del primer uso</button><button data-obj="QPushButton" data-name="folder «Abrir carpeta de complementos»" data-src="ui/src/mainwindow.cpp">Abrir carpeta de complementos</button><span class="spacer"></span><button>Cancelar</button><button class="default">Aceptar</button></div></div>
+<script src="inspector.js"></script>
+</body>
+</html>

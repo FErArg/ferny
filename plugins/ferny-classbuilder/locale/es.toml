@@ -1,0 +1,5 @@
+"Create C++ Class from Selection" = "Crear clase C++ desde la selección"
+"Select a valid class name first." = "Primero seleccione un nombre de clase válido."
+"%s already exists; nothing created." = "%s ya existe; no se creó nada."
+"Cannot create the class: %s." = "No se puede crear la clase: %s."
+"Created %s.h and %s.cpp." = "Se crearon %s.h y %s.cpp."

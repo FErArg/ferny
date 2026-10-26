@@ -1,0 +1,117 @@
+# Fuzz targets (cargo-fuzz, nightly, macOS/Linux). Not part of the main
+# workspace or of any release artefact; run by the validation gate.
+[package]
+name = "ferny-fuzz"
+version = "0.0.0"
+edition = "2024"
+publish = false
+license = "GPL-2.0-or-later"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "=0.4.13"
+mlua = { version = "=0.12.2", default-features = false, features = ["lua54", "vendored"] }
+ferny-build = { path = "../crates/ferny-build" }
+ferny-core = { path = "../crates/ferny-core" }
+ferny-lsp = { path = "../crates/ferny-lsp" }
+ferny-plugin = { path = "../crates/ferny-plugin" }
+serde_json = "=1.0.154"
+ferny-config = { path = "../crates/ferny-config" }
+ferny-syntax = { path = "../crates/ferny-syntax" }
+
+# Separate workspace: keeps libFuzzer out of the product's Cargo.lock.
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "decode"
+path = "fuzz_targets/decode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "ipc_request"
+path = "fuzz_targets/ipc_request.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "session"
+path = "fuzz_targets/session.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "search"
+path = "fuzz_targets/search.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "settings"
+path = "fuzz_targets/settings.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "geany_import"
+path = "fuzz_targets/geany_import.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "symbols"
+path = "fuzz_targets/symbols.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "build_commands"
+path = "fuzz_targets/build_commands.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "project"
+path = "fuzz_targets/project.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "lsp"
+path = "fuzz_targets/lsp.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "plugin_manifest"
+path = "fuzz_targets/plugin_manifest.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "lua_patterns"
+path = "fuzz_targets/lua_patterns.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "indent"
+path = "fuzz_targets/indent.rs"
+test = false
+doc = false
+bench = false

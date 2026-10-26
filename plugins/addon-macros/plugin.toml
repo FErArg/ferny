@@ -1,0 +1,4 @@
+id = "addon-macros"
+name = "Macros"
+version = "1.0"
+permissions = ["config"]

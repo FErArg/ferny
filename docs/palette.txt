@@ -1,0 +1,31 @@
+/* Coolors Exported Palette - https://coolors.co/000000-599a5a-000000-0a3336-0d403e */
+
+- CSV
+
+000000,599A5A,000000,0A3336,0D403E
+
+- With #
+
+#000000, #599A5A, #000000, #0A3336, #0D403E
+
+- Array
+
+["000000","599A5A","000000","0A3336","0D403E"]
+
+- Object
+
+{"Black":"000000","Sage Green":"599A5A","Black 2":"000000","Dark Teal":"0A3336","Dark Teal 2":"0D403E"}
+
+- Extended Array
+
+[{"name":"Black","hex":"000000","rgb":[0,0,0],"cmyk":[0,0,0,100],"hsb":[0,0,0],"hsl":[0,0,0],"lab":[0,0,0]},{"name":"Sage Green","hex":"599A5A","rgb":[89,154,90],"cmyk":[42,0,42,40],"hsb":[121,42,60],"hsl":[121,27,48],"lab":[58,-34,27]},{"name":"Black","hex":"000000","rgb":[0,0,0],"cmyk":[0,0,0,100],"hsb":[0,0,0],"hsl":[0,0,0],"lab":[0,0,0]},{"name":"Dark Teal","hex":"0A3336","rgb":[10,51,54],"cmyk":[81,6,0,79],"hsb":[184,81,21],"hsl":[184,69,13],"lab":[19,-13,-6]},{"name":"Dark Teal","hex":"0D403E","rgb":[13,64,62],"cmyk":[80,0,3,75],"hsb":[178,80,25],"hsl":[178,66,15],"lab":[24,-17,-4]}]
+
+- XML
+
+<palette>
+  <color name="Black" hex="000000" r="0" g="0" b="0" />
+  <color name="Sage Green" hex="599A5A" r="89" g="154" b="90" />
+  <color name="Black" hex="000000" r="0" g="0" b="0" />
+  <color name="Dark Teal" hex="0A3336" r="10" g="51" b="54" />
+  <color name="Dark Teal" hex="0D403E" r="13" g="64" b="62" />
+</palette>

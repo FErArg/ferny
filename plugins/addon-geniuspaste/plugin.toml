@@ -1,0 +1,4 @@
+id = "addon-geniuspaste"
+name = "Genius Paste"
+version = "1.0"
+permissions = ["clipboard"]

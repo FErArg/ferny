@@ -1,0 +1,3 @@
+# Test fixtures keep their exact bytes (encodings, BOMs, line endings,
+# trailing spaces): the repository settings must not apply to them.
+root = true

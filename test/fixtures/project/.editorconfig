@@ -1,0 +1,3 @@
+# Isolates this fixture (and its copy in the build tree) from the
+# repository's .editorconfig, so the project's indentation applies.
+root = true

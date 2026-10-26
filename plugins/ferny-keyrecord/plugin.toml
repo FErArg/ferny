@@ -1,0 +1,5 @@
+# plugin.toml — id must equal the folder name ([a-z0-9_-], ≤ 64)
+id = "ferny-keyrecord"
+name = "ferny-keyrecord"
+version = "0.11"
+permissions = []

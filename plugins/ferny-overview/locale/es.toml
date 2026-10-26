@@ -1,0 +1,6 @@
+"Go to Line..." = "Ir a línea..."
+"Jump to Definition" = "Saltar a definición"
+"Toggle Overview Panel" = "Alternar panel de vista general"
+"Use keybinding to navigate to line" = "Use atajo de teclado para navegar a línea"
+"Jump to definition - use LSP provider" = "Saltar a definición - use proveedor LSP"
+"Overview panel - requires UI extension" = "Panel de vista general - requiere extensión UI"

@@ -1,0 +1,3 @@
+line with trailing spaces   
+line with a tab	
+no final newline

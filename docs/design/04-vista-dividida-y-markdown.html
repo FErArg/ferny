@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferny — Vista dividida y vista previa de Markdown</title>
+<link rel="stylesheet" href="ferny.css">
+</head>
+<body class="">
+<h1 class="page">Vista dividida y vista previa de Markdown</h1>
+<p class="note">Ver → Dividir lado a lado con el mismo documento en dos vistas; Ver → Vista previa de Markdown a la derecha; corrector ortográfico activo (subrayado rojo). Clic sobre cualquier parte muestra el objeto que la dibuja (clase Qt, nombre y archivo); Esc lo oculta. <a href="index.html">Todas las pantallas</a>.</p>
+<div class="window" style="height:640px" data-obj="ferny::MainWindow (QMainWindow)" data-name="MainWindow" data-src="ui/src/mainwindow.cpp">
+<div class="titlebar" data-obj="QMainWindow" data-name="ferny::MainWindow (título)" data-src="ui/src/mainwindow.cpp · updateTitle()"><div class="lights"><i></i><i></i><i></i></div>notas.md — Ferny</div>
+<div class="menubar" data-obj="QMenuBar" data-name="menuBar()" data-src="ui/src/mainwindow.cpp · createMenus()"><span class="" data-obj="QMenu" data-name="Menú «file»" data-src="ui/src/mainwindow.cpp · createMenus()" data-note="Menú del registro de comandos del núcleo (ferny-core command.rs)"><u>A</u>rchivo</span><span class="" data-obj="QMenu" data-name="Menú «edit»" data-src="ui/src/mainwindow.cpp · createMenus()" data-note="Menú del registro de comandos del núcleo (ferny-core command.rs)"><u>E</u>ditar</span><span class="" data-obj="QMenu" data-name="Menú «search»" data-src="ui/src/mainwindow.cpp · createMenus()" data-note="Menú del registro de comandos del núcleo (ferny-core command.rs)"><u>B</u>uscar</span><span class="" data-obj="QMenu" data-name="Menú «view»" data-src="ui/src/mainwindow.cpp · createMenus()" data-note="Menú del registro de comandos del núcleo (ferny-core command.rs)"><u>V</u>er</span><span class="" data-obj="QMenu" data-name="Menú «document»" data-src="ui/src/mainwindow.cpp · createMenus()" data-note="Menú del registro de comandos del núcleo (ferny-core command.rs)"><u>D</u>ocumento</span><span class="" data-obj="QMenu" data-name="Menú «project»" data-src="ui/src/mainwindow.cpp · createMenus()" data-note="Menú del registro de comandos del núcleo (ferny-core command.rs)"><u>P</u>royecto</span><span class="" data-obj="QMenu" data-name="Menú «build»" data-src="ui/src/mainwindow.cpp · createMenus()" data-note="Menú del registro de comandos del núcleo (ferny-core command.rs)"><u>C</u>onstruir</span><span class="" data-obj="QMenu" data-name="Menú «tools»" data-src="ui/src/mainwindow.cpp · createMenus()" data-note="Menú construido por la interfaz (plugins, H3.4)"><u>H</u>erramientas</span><span class="" data-obj="QMenu" data-name="Menú «help»" data-src="ui/src/mainwindow.cpp · createMenus()" data-note="Menú del registro de comandos del núcleo (ferny-core command.rs)">Ay<u>u</u>da</span></div>
+<div class="body">
+
+<div class="column">
+<div class="tabs" data-obj="QTabWidget" data-name="m_tabs (documentos abiertos)" data-src="ui/src/mainwindow.cpp · addTab()"><span class=" modified" data-obj="QTabBar tab" data-name="Pestaña de documento «hello.cpp»" data-src="ui/src/mainwindow.cpp · updateTabLabel()">hello.cpp<span class="close">✕</span></span><span class="active" data-obj="QTabBar tab" data-name="Pestaña de documento «notas.md»" data-src="ui/src/mainwindow.cpp · updateTabLabel()">notas.md<span class="close">✕</span></span><span class="" data-obj="QTabBar tab" data-name="Pestaña de documento «Cargo.toml»" data-src="ui/src/mainwindow.cpp · updateTabLabel()">Cargo.toml<span class="close">✕</span></span></div><div style="display:flex;flex:1;min-height:0" data-obj="QSplitter" data-name="m_splitter (horizontal)" data-src="ui/src/mainwindow.cpp · splitView()" data-note="Ver → Dividir lado a lado (H4.1b)">
+<div class="column" style="border-right:4px solid var(--panel-border)"><div class="editor" data-obj="ferny::FernyEditor (ScintillaEditBase)" data-name="Editor de la pestaña (notas.md)" data-src="ui/src/fernyeditor.cpp" data-note="Scintilla 5.6.7 + Lexilla 5.5.4; fuente: editor.font_family / editor.font_size">
+<div class="numbers" data-obj="Scintilla margin 0" data-name="Margen de números de línea" data-src="ui/src/fernyeditor.cpp" data-note="Estilo margin_line_number del esquema">1
+2
+3
+4
+5
+6
+7
+8</div>
+<div class="fold" data-obj="Scintilla margin 2 (kFoldMargin)" data-name="Margen de plegado" data-src="ui/src/fernyeditor.cpp"></div>
+<div class="code"><div class="line"># Notas del proyecto</div><div class="line"></div><div class="line current" data-obj="Scintilla caret line" data-name="Línea del cursor (current_line)" data-src="data/colorschemes/*.toml" data-note="Estilo current_line del esquema de colores">Ferny es un editor <span class="squiggle-spell" data-obj="Scintilla indicator 12" data-name="Palabra mal escrita" data-src="ui/src/mainwindow.cpp · refreshSpelling()" data-note="Diccionario Hunspell del usuario (H4.2c)">inspirdo</span> en Geany.<span class="caret"></span></div><div class="line"></div><div class="line">- Vista previa sin scripts</div><div class="line">- Enlaces solo http(s)</div><div class="line"></div><div class="line">&lt;script&gt;alert(1)&lt;/script&gt;</div></div>
+</div></div>
+<div class="column"><div class="editor" data-obj="ferny::FernyEditor (ScintillaEditBase)" data-name="m_splitEditor (segunda vista)" data-src="ui/src/fernyeditor.cpp" data-note="Comparte el documento Scintilla de la pestaña (SCI_SETDOCPOINTER)">
+<div class="numbers" data-obj="Scintilla margin 0" data-name="Margen de números de línea" data-src="ui/src/fernyeditor.cpp" data-note="Estilo margin_line_number del esquema">1
+2
+3
+4
+5
+6
+7
+8</div>
+<div class="fold" data-obj="Scintilla margin 2 (kFoldMargin)" data-name="Margen de plegado" data-src="ui/src/fernyeditor.cpp"></div>
+<div class="code"><div class="line"># Notas del proyecto</div><div class="line"></div><div class="line">Ferny es un editor <span class="squiggle-spell" data-obj="Scintilla indicator 12" data-name="Palabra mal escrita" data-src="ui/src/mainwindow.cpp · refreshSpelling()" data-note="Diccionario Hunspell del usuario (H4.2c)">inspirdo</span> en Geany.</div><div class="line"></div><div class="line">- Vista previa sin scripts</div><div class="line">- Enlaces solo http(s)</div><div class="line"></div><div class="line current" data-obj="Scintilla caret line" data-name="Línea del cursor (current_line)" data-src="data/colorschemes/*.toml" data-note="Estilo current_line del esquema de colores">&lt;script&gt;alert(1)&lt;/script&gt;<span class="caret"></span></div></div>
+</div></div></div>
+
+</div>
+<div class="dock right" style="width:300px" data-obj="QDockWidget" data-name="previewDock (Vista previa de Markdown)" data-src="ui/src/mainwindow.cpp · createDocks()">
+<div class="dock-title"><b>Vista previa de Markdown</b><span>✕</span></div>
+<div class="preview" data-obj="QTextBrowser" data-name="m_preview" data-src="ui/src/mainwindow.cpp · refreshPreview()" data-note="HTML de ferny_core::markdown (pulldown-cmark), sin scripts ni imágenes (H4.2b)">
+<h1>Notas del proyecto</h1><p>Ferny es un editor inspirdo en Geany.</p><ul><li>Vista previa sin scripts</li><li>Enlaces solo http(s)</li></ul><p><code>&lt;script&gt;alert(1)&lt;/script&gt;</code></p></div></div>
+</div>
+<div class="statusbar" data-obj="QStatusBar" data-name="statusBar()" data-src="ui/src/mainwindow.cpp"><span class="msg" data-obj="QStatusBar message" data-name="Mensaje temporal" data-src="ui/src/mainwindow.cpp · statusBar()-&gt;showMessage()">Guardado.</span><span class="field" data-obj="QLabel" data-name="m_position" data-src="ui/src/mainwindow.cpp · updateStatus()">Línea 5/9, col. 41</span><span class="field" data-obj="QLabel" data-name="m_selection" data-src="ui/src/mainwindow.cpp · updateStatus()">Sel. 0</span><span class="field" data-obj="QLabel" data-name="m_indentation" data-src="ui/src/mainwindow.cpp · updateStatus()">Espacios: 4</span><span class="field" data-obj="QLabel" data-name="m_encoding" data-src="ui/src/mainwindow.cpp · updateStatus()">UTF-8</span><span class="field" data-obj="QLabel" data-name="m_eol" data-src="ui/src/mainwindow.cpp · updateStatus()">LF</span><span class="field" data-obj="QLabel" data-name="m_filetype" data-src="ui/src/mainwindow.cpp · updateStatus()">Markdown</span><span class="field" data-obj="QLabel" data-name="m_documentState" data-src="ui/src/mainwindow.cpp · updateStatus()">1 palabra mal escrita</span><span class="field" data-obj="QLabel" data-name="m_trust" data-src="ui/src/mainwindow.cpp · updateStatus()">De confianza</span></div>
+</div>
+<script src="inspector.js"></script>
+</body>
+</html>

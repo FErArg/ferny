@@ -1,0 +1,5 @@
+# Synthetic test configuration (H1.5a).
+[editor]
+indent_width = 3
+line_numbers = false
+long_line_marker = 100

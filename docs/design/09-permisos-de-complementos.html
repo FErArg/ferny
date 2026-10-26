@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferny — Permisos de complementos</title>
+<link rel="stylesheet" href="ferny.css">
+</head>
+<body class="">
+<h1 class="page">Permisos de complementos</h1>
+<p class="note">Izquierda: diálogo al encontrar un complemento nuevo. Derecha: confirmación del primer uso de un permiso sensible. Clic sobre cualquier parte muestra el objeto que la dibuja (clase Qt, nombre y archivo); Esc lo oculta. <a href="index.html">Todas las pantallas</a>.</p>
+<div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+<div class="dialog" style="width:420px" data-obj="QDialog" data-name="Diálogo «Complemento nuevo»" data-src="ui/src/mainwindow.cpp · startPlugins()" data-note="Primera carga o manifiesto cambiado (R2)">
+<div class="titlebar" data-obj="QMainWindow" data-name="ferny::MainWindow (título)" data-src="ui/src/mainwindow.cpp · updateTitle()"><div class="lights"><i></i><i></i><i></i></div>Complemento nuevo</div>
+<div class="content"><span data-obj="QLabel" data-name="intro" data-src="ui/src/mainwindow.cpp · startPlugins()">¿Activar el complemento Word Count 1.2? Pide estos permisos; desmarque los que no quiera conceder.</span>
+<label class="check" data-obj="QCheckBox" data-name="Permiso process.spawn" data-src="ui/src/mainwindow.cpp · permissionText()"><span class="box on">✓</span> Ejecutar programas</label>
+<label class="check" data-obj="QCheckBox" data-name="Permiso clipboard" data-src="ui/src/mainwindow.cpp · permissionText()"><span class="box on">✓</span> Usar el portapapeles</label></div>
+<div class="buttons" data-obj="QDialogButtonBox" data-name="buttons" data-src="ui/src/mainwindow.cpp"><button>Dejar desactivado</button><button class="default">Activar</button></div></div>
+<div class="dialog" style="width:420px" data-obj="QMessageBox" data-name="Confirmación de primer uso" data-src="ui/src/mainwindow.cpp · applyPluginActions()" data-note="Permisos sensibles: process.spawn, fs.read.any (H3.3b)">
+<div class="titlebar" data-obj="QMainWindow" data-name="ferny::MainWindow (título)" data-src="ui/src/mainwindow.cpp · updateTitle()"><div class="lights"><i></i><i></i><i></i></div>Permiso de complemento</div>
+<div class="content" style="flex-direction:row;gap:12px"><span style="font-size:34px">?</span><span data-obj="QLabel" data-name="Texto de la confirmación" data-src="ui/src/mainwindow.cpp">El complemento Word Count 1.2 quiere usar este permiso por primera vez: Ejecutar programas. ¿Permitirlo? Ferny recuerda la respuesta hasta que cambien los permisos del complemento.</span></div>
+<div class="buttons"><button>Denegar</button><button class="default">Permitir</button></div></div></div>
+<script src="inspector.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.keyfile
+*.secret
+*.pem
+*.p12
+*.pfx
+*.cer
+*.mobileprovision
+*.provisionprofile
+credentials.json
+secrets.json
+# Code-signing / notarization material must never be committed
+signing/
+notary-*.json
+
+# Build outputs (release artifacts live in bin/; DMGs stay on disk only,
+# maintainer decision 2026-10-16: pushing them would publish them)
+/bin/*.dmg
+/bin/*.dmg.sha256
+/target/
+/build/
+/build-*/
+CMakeUserPresets.json
+*.user
+compile_commands.json
+
+# Fuzzing corpora and crash artifacts (may contain large or sensitive inputs)
+/fuzz/artifacts/
+/fuzz/corpus/
+/fuzz/coverage/
+/fuzz/target/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+tmp/
+
+# OS / IDE
+.DS_Store
+.AppleDouble
+Thumbs.db
+.idea/
+.vscode/
+
+# Local AI-agent settings
+.claude/
+.opencode/
+
+# clangd index written by the LSP tests (H3.1)
+.cache/

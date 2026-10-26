@@ -1,0 +1,6 @@
+f8613f6e0374276ccb8ae42508852c657cfbc371ecd2d7deedb7171ba00c91b7  cxx-qt-cmake/CMakeLists.txt
+074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff  cxx-qt-cmake/LICENSES/Apache-2.0.txt
+b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0  cxx-qt-cmake/LICENSES/MIT.txt
+355e6b3e1352ea4d056e1ec7003c5e2e5067dde1ee913e318d652e27de3ae73b  cxx-qt-cmake/README.md
+6a779d9e84a5a847f247a8dde68798bb46b94f0cc9854bfcf1d599a07483b1ca  cxx-qt-cmake/cmake/CxxQt.cmake
+e49d52701f36ab89a94b11af3ec8132cdc72e7ed9a188aef7b1752a6e37b0147  cxx-qt-cmake/cmake/CxxQtConfig.cmake.in

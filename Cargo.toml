@@ -1,0 +1,69 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/ferny-core",
+    "crates/ferny-config",
+    "crates/ferny-syntax",
+    "crates/ferny-search",
+    "crates/ferny-build",
+    "crates/ferny-lsp",
+    "crates/ferny-plugin",
+    "crates/ferny-bridge",
+    "tools/geany-import",
+    "tools/ferny-sbom",
+]
+# Fuzz targets have their own workspace (nightly, libFuzzer).
+exclude = ["fuzz"]
+
+[workspace.package]
+version = "0.6.17"
+# A workspace version bump changes each local package's lockfile entry. After
+# editing this value, regenerate Cargo.lock with the pinned toolchain before
+# running the gate's --locked Clippy/test commands.
+edition = "2024"
+rust-version = "1.99"
+license = "GPL-2.0-or-later"
+repository = "https://github.com/FErArg/ferny"
+publish = false
+
+# Dependencies are declared here when first used, pinned and recorded in
+# docs/DEPENDENCIES.md (no dependency without justification).
+[workspace.dependencies]
+ferny-core = { path = "crates/ferny-core" }
+ferny-config = { path = "crates/ferny-config" }
+ferny-syntax = { path = "crates/ferny-syntax" }
+ferny-build = { path = "crates/ferny-build" }
+ferny-lsp = { path = "crates/ferny-lsp" }
+ferny-plugin = { path = "crates/ferny-plugin" }
+cxx = "1.0.205"
+cxx-qt = "=0.10.0"
+cxx-qt-lib = { version = "=0.10.0", default-features = false }
+cxx-qt-build = "=0.10.0"
+thiserror = "=2.0.21"
+encoding_rs = "=0.8.42"
+chardetng = { version = "=1.0.0", default-features = false }
+serde = { version = "=1.0.229", features = ["derive"] }
+toml = "=1.1.8"
+regex = "=1.13.1"
+serde_json = "=1.0.154"
+# Lua 5.4 plugin host (H3.2), Lua compiled from source (vendored).
+pulldown-cmark = { version = "=0.13.4", default-features = false, features = ["html"] }
+spellbook = "=0.4.2"
+mlua = { version = "=0.12.2", default-features = false, features = ["lua54", "vendored"] }
+# tree-sitter (H2.2): runtime and the five grammars of plan v3.
+tree-sitter = "=0.27.1"
+tree-sitter-c = "=0.24.2"
+tree-sitter-cpp = "=0.23.4"
+tree-sitter-rust = "=0.24.2"
+tree-sitter-python = "=0.25.0"
+tree-sitter-javascript = "=0.25.0"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+dbg_macro = "warn"
+todo = "warn"
+unwrap_used = "warn"

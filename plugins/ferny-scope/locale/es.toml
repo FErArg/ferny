@@ -1,0 +1,7 @@
+"Go to Scope Start" = "Ir al inicio del ámbito"
+"Go to Scope End" = "Ir al final del ámbito"
+"Select Current Scope" = "Seleccionar ámbito actual"
+"No document open" = "No hay documento abierto"
+"Scope starts at line " = "El ámbito empieza en la línea "
+"Go to scope end - not implemented" = "Ir al final del ámbito - no implementado"
+"Select current scope - requires editor API" = "Seleccionar ámbito actual - requiere API del editor"

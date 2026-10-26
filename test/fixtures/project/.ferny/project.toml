@@ -1,0 +1,12 @@
+# Synthetic project fixture (H2.5a).
+version = 1
+name = "Demo Project"
+base_path = "."
+file_patterns = ["*.c", "*.h"]
+
+[indentation]
+width = 3
+use_tabs = false
+
+[build]
+compile = "cc -c %f -o %p/out.o"

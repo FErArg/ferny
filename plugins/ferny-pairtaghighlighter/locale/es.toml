@@ -1,0 +1,7 @@
+"Highlight Matching Tag" = "Resaltar etiqueta coincidente"
+"Jump to Matching Tag" = "Saltar a etiqueta coincidente"
+"No document open" = "No hay documento abierto"
+"Tag: " = "Etiqueta: "
+" (matching API pending)" = " (API coincidente pendiente)"
+"No tag at cursor position" = "No hay etiqueta en la posición del cursor"
+"Jump to matching tag - requires editor API" = "Saltar a etiqueta coincidente - requiere API del editor"

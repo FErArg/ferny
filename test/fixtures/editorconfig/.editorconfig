@@ -1,0 +1,13 @@
+# Synthetic fixture project for .editorconfig tests (H1.3c).
+root = true
+
+[*.txt]
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.py]
+indent_style = space
+indent_size = 2
+
+[*]
+build_command = do not run this

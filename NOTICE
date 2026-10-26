@@ -1,0 +1,22 @@
+Ferny is inspired by Geany (https://www.geany.org/) and may reuse code and
+data files from it under the GNU General Public License, version 2 or later.
+Geany is Copyright (C) the Geany contributors; see
+https://github.com/geany/geany/blob/master/AUTHORS.
+
+Data from Geany 2.1.0 (third_party/geany, converted into data/filetypes
+and data/colorschemes, and copied into data/templates and
+data/snippets.conf, by tools/geany-import): filetype definitions,
+filetype extensions and Lexilla style mappings, GPL-2.0-or-later. The
+colour schemes keep the licences stated by their authors (GPL-2.0-or-later,
+LGPL-2.0-or-later, MIT, BSD, public domain); each converted scheme records
+its licence in its `license` field. Authors: third_party/geany/AUTHORS and
+the header of each scheme in third_party/geany/data/colorschemes.
+
+Third-party components keep their own licences:
+  Scintilla, Lexilla  - HPND-style licence (third_party/)
+  Qt 6                - LGPL-3.0
+  Lua 5.4             - MIT
+  tree-sitter         - MIT (grammars: see each grammar's licence)
+
+Lucide icons (imagenes/lucide/): Copyright (c) 2026 Lucide Icons and
+Contributors; ISC License. https://lucide.dev/

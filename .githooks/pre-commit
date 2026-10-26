@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Secret scan of staged changes before every commit (SECURITY.md).
+# Fails closed: blocks the commit if gitleaks is missing or finds a leak.
+set -euo pipefail
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: gitleaks is not installed; commit blocked." >&2
+  echo "Install it (macOS: brew install gitleaks) and retry." >&2
+  exit 1
+fi
+
+if ! gitleaks git --pre-commit --staged --redact --no-banner .; then
+  echo "pre-commit: gitleaks found possible secrets; commit blocked." >&2
+  echo "Remove the secret from the staged changes. Never bypass with --no-verify." >&2
+  exit 1
+fi

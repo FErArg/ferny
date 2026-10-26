@@ -1,0 +1,315 @@
+/* Ferny UI mockups: shared design tokens taken from the application.
+ * - Interface: Qt on macOS uses the system font (San Francisco) at 13 px.
+ * - Editor: QFontDatabase::FixedFont (Menlo on macOS) at 12 pt
+ *   (setting editor.font_size, default 12; 72 dpi on macOS = 12 px).
+ * - Editor colours: data/colorschemes/default.toml and darcula.toml
+ *   (Lexilla C++ styles as exported by File → Export as HTML).
+ * - Chrome: macOS light appearance (window, docks, status bar).
+ */
+:root {
+  --ui-font: -apple-system, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+  --ui-size: 13px;
+  --small-size: 11px;
+  --mono-font: Menlo, "SF Mono", Monaco, "DejaVu Sans Mono", monospace;
+  --mono-size: 12px;
+  --mono-line: 15px;
+
+  /* macOS chrome (light) */
+  --window: #ececec;
+  --panel: #f6f6f6;
+  --panel-border: #c8c8c8;
+  --tab-active: #ffffff;
+  --tab-inactive: #e3e3e3;
+  --text: #1d1d1f;
+  --text-dim: #6e6e73;
+  --accent: #0a64d6;
+  --banner-bg: #fff4c5;
+  --banner-border: #e0c35b;
+
+  /* Scheme "Default" (Geany 2.1.0) */
+  --ed-bg: #ffffff;
+  --ed-fg: #000000;
+  --ed-margin-bg: #d0d0d0;
+  --ed-margin-fg: #000000;
+  --ed-fold-bg: #dfdfdf;
+  --ed-current-line: #f0f0f0;
+  --ed-selection: #c0c0c0;
+  --ed-caret: #000000;
+  --ed-comment: #d00000;
+  --ed-preprocessor: #007f7f;
+  --ed-string: #ff8000;
+  --ed-keyword: #00007f;
+  --ed-number: #007f00;
+  --ed-operator: #301010;
+  --ed-identifier: #000000;
+  --ed-squiggle-error: #e02020;
+  --ed-squiggle-warning: #f09000;
+  --ed-spell: #d03030;
+  --ed-mark: #ffa000;
+}
+
+/* Scheme "Darcula" */
+.scheme-darcula {
+  --ed-bg: #3b3b3b;
+  --ed-fg: #b6c3cf;
+  --ed-margin-bg: #424446;
+  --ed-margin-fg: #989898;
+  --ed-fold-bg: #4c4c4c;
+  --ed-current-line: #434343;
+  --ed-selection: #2f5692;
+  --ed-caret: #c6c6c6;
+  --ed-comment: #919191;
+  --ed-preprocessor: #edc881;
+  --ed-string: #b2ca78;
+  --ed-keyword: #d58a4a;
+  --ed-number: #7aa6c4;
+  --ed-operator: #b6c3cf;
+  --ed-identifier: #b6c3cf;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font: var(--ui-size)/1.35 var(--ui-font);
+  color: var(--text);
+  background: #d9d9de;
+  padding: 24px;
+}
+h1.page { font-size: 15px; font-weight: 600; margin: 0 0 4px; }
+p.note { margin: 0 0 16px; color: var(--text-dim); font-size: 12px; max-width: 70em; }
+a { color: var(--accent); }
+
+/* ---- Window ------------------------------------------------------------ */
+.window {
+  width: 1100px;
+  max-width: 100%;
+  background: var(--window);
+  border: 1px solid #b0b0b0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .28);
+  display: flex;
+  flex-direction: column;
+}
+.titlebar {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(#ececec, #e2e2e2);
+  border-bottom: 1px solid var(--panel-border);
+  font-size: 13px;
+  font-weight: 600;
+  color: #4d4d4d;
+}
+.lights { position: absolute; left: 10px; display: flex; gap: 8px; }
+.lights i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+.lights i:nth-child(1) { background: #ff5f57; }
+.lights i:nth-child(2) { background: #febc2e; }
+.lights i:nth-child(3) { background: #28c840; }
+
+.menubar {
+  display: flex;
+  gap: 2px;
+  padding: 2px 8px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--panel-border);
+}
+.menubar span { padding: 2px 8px; border-radius: 4px; }
+.menubar span.open { background: var(--accent); color: #fff; }
+.menubar u { text-decoration: underline; }
+
+.body { display: flex; flex: 1; min-height: 0; }
+.column { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+
+/* ---- Docks ------------------------------------------------------------- */
+.dock {
+  background: var(--panel);
+  border-right: 1px solid var(--panel-border);
+  display: flex;
+  flex-direction: column;
+}
+.dock-title {
+  font-size: var(--small-size);
+  color: var(--text-dim);
+  padding: 3px 6px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--panel-border);
+}
+.dock-title b { font-weight: 500; }
+.dock.right { border-right: 0; border-left: 1px solid var(--panel-border); }
+.dock.bottom { border-right: 0; border-top: 1px solid var(--panel-border); }
+
+/* Document-mode tab bars (QTabWidget::setDocumentMode) */
+.tabs { display: flex; background: var(--panel); border-bottom: 1px solid var(--panel-border); }
+.tabs > span {
+  padding: 4px 12px;
+  border-right: 1px solid var(--panel-border);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.tabs > span.active { background: var(--tab-active); color: var(--text); }
+.tabs > span .close { margin-left: 8px; color: #9a9a9a; }
+.tabs > span.modified::before { content: "* "; }
+
+.list { background: #fff; flex: 1; padding: 2px 0; overflow: hidden; }
+.list div { padding: 1px 8px; white-space: nowrap; }
+.list div.sel { background: var(--accent); color: #fff; }
+.list .group { font-weight: 600; color: var(--text); }
+.list .child { padding-left: 22px; }
+.list .status { float: right; color: var(--text-dim); font-family: var(--mono-font); }
+
+/* ---- Editor (Scintilla) ------------------------------------------------- */
+.editor {
+  font: var(--mono-size)/var(--mono-line) var(--mono-font);
+  background: var(--ed-bg);
+  color: var(--ed-fg);
+  display: grid;
+  grid-template-columns: auto 14px 1fr;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.editor .numbers {
+  background: var(--ed-margin-bg);
+  color: var(--ed-margin-fg);
+  text-align: right;
+  padding: 0 6px 0 10px;
+  white-space: pre;
+}
+.editor .fold { background: var(--ed-fold-bg); }
+.editor .code { white-space: pre; padding-left: 4px; overflow: hidden; }
+.editor .code .line { min-height: var(--mono-line); }
+.editor .current { background: var(--ed-current-line); }
+.editor .caret { border-left: 1px solid var(--ed-caret); margin-left: -1px; }
+.c-comment { color: var(--ed-comment); }
+.c-pre { color: var(--ed-preprocessor); }
+.c-string { color: var(--ed-string); }
+.c-keyword { color: var(--ed-keyword); font-weight: bold; }
+.c-number { color: var(--ed-number); }
+.c-op { color: var(--ed-operator); }
+.c-id { color: var(--ed-identifier); }
+.squiggle-error { text-decoration: underline wavy var(--ed-squiggle-error); }
+.squiggle-warning { text-decoration: underline wavy var(--ed-squiggle-warning); }
+.squiggle-spell { text-decoration: underline wavy var(--ed-spell); }
+.mark { background: rgba(255, 160, 0, .35); border-radius: 3px; }
+.sel { background: var(--ed-selection); }
+
+/* ---- Find bar, banner, status bar ------------------------------------- */
+.findbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  padding: 5px 8px;
+  background: var(--panel);
+  border-top: 1px solid var(--panel-border);
+}
+.banner {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 10px;
+  background: var(--banner-bg);
+  border-bottom: 1px solid var(--banner-border);
+}
+.banner .text { flex: 1; }
+.statusbar {
+  display: flex;
+  gap: 0;
+  font-size: 12px;
+  background: var(--panel);
+  border-top: 1px solid var(--panel-border);
+  padding: 2px 6px;
+  color: #333;
+}
+.statusbar .msg { flex: 1; color: var(--text-dim); }
+.statusbar span.field { padding: 0 10px; border-left: 1px solid var(--panel-border); }
+.statusbar span.warn { color: #b0002a; }
+
+/* ---- Controls ---------------------------------------------------------- */
+input[type=text], .input {
+  font: var(--ui-size) var(--ui-font);
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding: 3px 6px;
+  background: #fff;
+  min-width: 160px;
+}
+.input.placeholder { color: #a0a0a0; }
+button, .button {
+  font: var(--ui-size) var(--ui-font);
+  border: 1px solid #c4c4c4;
+  border-radius: 6px;
+  padding: 3px 12px;
+  background: #fff;
+  color: var(--text);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .06);
+}
+button.default, .button.default { background: var(--accent); color: #fff; border-color: #0957bd; }
+button { white-space: nowrap; }
+label.check { display: inline-flex; gap: 4px; align-items: center; }
+.box {
+  width: 13px; height: 13px; border: 1px solid #a9a9a9; border-radius: 3px; background: #fff;
+  display: inline-block; text-align: center; font-size: 10px; line-height: 12px;
+}
+.box.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ---- Dialogs ----------------------------------------------------------- */
+.dialog {
+  background: var(--window);
+  border: 1px solid #b0b0b0;
+  border-radius: 10px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .28);
+  overflow: hidden;
+}
+.dialog .content { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+.dialog .buttons { display: flex; justify-content: flex-end; gap: 8px; padding: 0 16px 14px; }
+.dialog .buttons .spacer { flex: 1; }
+fieldset {
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  padding: 8px 12px 10px;
+  margin: 0;
+  background: rgba(255, 255, 255, .45);
+}
+legend { font-weight: 600; padding: 0 4px; }
+.form { display: grid; grid-template-columns: 260px 1fr; gap: 6px 10px; align-items: center; }
+.form .label { text-align: right; }
+table.grid { border-collapse: collapse; width: 100%; background: #fff; }
+table.grid th, table.grid td { text-align: left; padding: 3px 8px; border-bottom: 1px solid #ececec; white-space: nowrap; }
+table.grid th { font-weight: 500; color: var(--text-dim); background: #f3f3f3; border-bottom: 1px solid #d5d5d5; }
+table.grid tr.sel td { background: var(--accent); color: #fff; }
+
+.preview {
+  background: #fff;
+  padding: 10px 14px;
+  font: var(--ui-size)/1.45 var(--ui-font);
+  flex: 1;
+  overflow: hidden;
+}
+.preview h1 { font-size: 22px; margin: 4px 0 8px; }
+.preview code { font-family: var(--mono-font); font-size: 12px; }
+
+/* ---- Inspector (click to see the object's name) ------------------------ */
+[data-obj] { cursor: help; }
+.inspected { outline: 2px solid #ff2d55 !important; outline-offset: -2px; }
+#inspector {
+  position: fixed;
+  z-index: 1000;
+  max-width: 420px;
+  background: #1d1d1f;
+  color: #fff;
+  font: 12px/1.45 var(--ui-font);
+  padding: 8px 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+  pointer-events: none;
+  display: none;
+}
+#inspector b { font-size: 13px; }
+#inspector code { font-family: var(--mono-font); font-size: 11px; color: #ffd60a; }
+#inspector .src { color: #a1a1a6; }
+.legend { margin-top: 12px; font-size: 12px; color: var(--text-dim); }

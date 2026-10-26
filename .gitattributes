@@ -1,0 +1,19 @@
+# Line endings: bash scripts and Git hooks must keep LF on every platform,
+# or they fail on Windows checkouts with core.autocrlf=true.
+* text=auto
+*.sh text eol=lf
+.githooks/* text eol=lf
+*.ps1 text eol=crlf
+
+# Vendored third-party code: keep bytes exactly as released (the SHA-256
+# manifests in third_party/*.sha256 must match on every platform).
+third_party/** -text -whitespace
+
+# Test fixtures: exact bytes matter (invalid UTF-8, line endings).
+test/fixtures/** -text -whitespace
+# FSF licence texts kept byte for byte (their SHA-256 is recorded).
+packaging/macos/licenses/*.txt -text -whitespace
+
+# Geany templates and snippets, copied verbatim by tools/geany-import.
+data/templates/** -text -whitespace
+data/snippets.conf -text -whitespace
